@@ -11,18 +11,16 @@ object FrmMain: TFrmMain
   Font.Height = -15
   Font.Name = 'Droid Sans'
   Font.Style = []
-  OldCreateOrder = False
   OnCreate = FormCreate
   DesignSize = (
     533
     90)
-  PixelsPerInch = 96
-  TextHeight = 18
+  TextHeight = 15
   object lblFilename: TLabel
     Left = 8
     Top = 41
-    Width = 4
-    Height = 18
+    Width = 5
+    Height = 15
     Anchors = [akLeft, akRight, akBottom]
   end
   object btnConvert: TButton
@@ -50,7 +48,7 @@ object FrmMain: TFrmMain
     Left = 8
     Top = 16
     Width = 380
-    Height = 26
+    Height = 23
     EmptyTextStyle = []
     FlatLineColor = 11250603
     FocusColor = clWhite
@@ -77,7 +75,7 @@ object FrmMain: TFrmMain
     TabOrder = 2
     Text = ''
     Visible = True
-    Version = '1.6.0.0'
+    Version = '1.7.1.2'
     ButtonStyle = bsButton
     ButtonWidth = 16
     Flat = False
@@ -87,6 +85,7 @@ object FrmMain: TFrmMain
     OnClickBtn = txtFolderClickBtn
   end
   object quCompanies: TFDQuery
+    Connection = FDConnection1
     SQL.Strings = (
       'select * from companies limit 10')
     Left = 64
@@ -532,8 +531,9 @@ object FrmMain: TFrmMain
       'Database=floridallc'
       'User_Name=sysdba'
       'Password=masterkey'
-      'Server=192.168.0.134'
+      'Server='
       'DriverID=MySQL')
+    Connected = True
     Left = 264
     Top = 48
   end
