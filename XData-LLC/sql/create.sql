@@ -109,7 +109,7 @@ CREATE TABLE IF NOT EXISTS `companies` (
   KEY `KEY_RA_NAME` (`ra_name`),
   KEY `KEY_PRINC1_NAME` (`princ1_name`),
   -- KEY `KEY_FILEDATE_YEAR` ((right(`file_date`,4))),
-  `FILEDATE_YEAR` VARCHAR(4) AS (RIGHT('file_date',4)),
+  `FILEDATE_YEAR` VARCHAR(4) AS (RIGHT('file_date',4)) STORED ,
   KEY `KEY_FILEDATE_YEAR` (`FILEDATE_YEAR`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -120,7 +120,9 @@ CREATE TABLE IF NOT EXISTS `tokens` (
   `Id` int unsigned NOT NULL AUTO_INCREMENT,
   `UserId` int DEFAULT '0',
   `Token` char(36) NOT NULL DEFAULT '',
-  `ValidUntil` timestamp NOT NULL DEFAULT ((now() + interval 1 hour)),
+--  `ValidUntil` timestamp NOT NULL DEFAULT ((now() + interval 1 hour)),
+	`time_stamp` TIMESTAMP DEFAULT NOW(),
+	`ValidUntil` TIMESTAMP AS (DATE_ADD(NOW(), INTERVAL 1 HOUR)),
   PRIMARY KEY (`Id`),
   KEY `User_FK` (`UserId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
