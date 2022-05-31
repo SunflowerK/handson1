@@ -108,7 +108,9 @@ CREATE TABLE IF NOT EXISTS `companies` (
   KEY `KEY_STATUS` (`status`),
   KEY `KEY_RA_NAME` (`ra_name`),
   KEY `KEY_PRINC1_NAME` (`princ1_name`),
-  KEY `KEY_FILEDATE_YEAR` ((right(`file_date`,4)))
+  -- KEY `KEY_FILEDATE_YEAR` ((right(`file_date`,4))),
+  `FILEDATE_YEAR` VARCHAR(4) AS (RIGHT('file_date',4)),
+  KEY `KEY_FILEDATE_YEAR` (`FILEDATE_YEAR`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- Data exporting was unselected.
