@@ -1,0 +1,15 @@
+﻿[Pool]
+Coordinates=0,0,40,33
+
+[Dispatcher]
+Coordinates=59,1,67,33
+
+[XDataServer]
+Coordinates=145,1,75,33
+
+[AureliusConnection]
+Coordinates=145,53,112,33
+
+[Connection]
+Coordinates=66,53,70,33
+

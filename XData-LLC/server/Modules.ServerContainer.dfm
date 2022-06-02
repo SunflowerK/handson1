@@ -1,5 +1,4 @@
 object ServerContainer: TServerContainer
-  OldCreateOrder = False
   OnCreate = DataModuleCreate
   Height = 210
   Width = 431
@@ -12,7 +11,7 @@ object ServerContainer: TServerContainer
     BaseUrl = 'http://+:80/flix'
     Dispatcher = Dispatcher
     Pool = Pool
-    DefaultEntitySetPermissions = [List]
+    DefaultEntitySetPermissions = [List, Get]
     EntitySetPermissions = <
       item
         EntitySetName = 'companies'
@@ -38,7 +37,7 @@ object ServerContainer: TServerContainer
       'Database=floridallc'
       'User_Name=sysdba'
       'Password=masterkey'
-      'Server=192.168.0.134'
+      'Server='
       'DriverID=MySQL')
     FetchOptions.AssignedValues = [evItems, evRowsetSize, evUnidirectional, evCursorKind]
     FetchOptions.RowsetSize = 10000
