@@ -28,7 +28,7 @@ implementation
 
 {$R *.fmx}
 const
-  WSROOT = 'http://192.168.0.2/flix';
+  WSROOT = 'http://localhost:80/flix';
 
 
 

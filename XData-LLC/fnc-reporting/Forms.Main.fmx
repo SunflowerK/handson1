@@ -25,6 +25,7 @@ object FrmMain: TFrmMain
     LengthLimit = 12
   end
   object btnLookup: TTMSFNCButton
+    Font.Family = 'Segoe UI'
     Font.Name = 'Segoe UI'
     Size.Width = 100.000000000000000000
     Size.Height = 22.000000000000000000

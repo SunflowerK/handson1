@@ -13,15 +13,13 @@ object FrmSettings: TFrmSettings
   Font.Height = -16
   Font.Name = 'Droid Sans Mono'
   Font.Style = []
-  OldCreateOrder = False
   Position = poMainFormCenter
   OnCreate = FormCreate
   OnShow = FormShow
   DesignSize = (
     416
     211)
-  PixelsPerInch = 96
-  TextHeight = 19
+  TextHeight = 16
   object txtLogin: TAdvEdit
     Left = 104
     Top = 16
@@ -56,7 +54,7 @@ object FrmSettings: TFrmSettings
     TabOrder = 0
     Text = ''
     Visible = True
-    Version = '3.5.3.5'
+    Version = '4.0.3.5'
   end
   object txtPassword: TAdvEdit
     Left = 104
@@ -93,7 +91,7 @@ object FrmSettings: TFrmSettings
     TabOrder = 1
     Text = ''
     Visible = True
-    Version = '3.5.3.5'
+    Version = '4.0.3.5'
   end
   object btnCancel: TAdvGlowButton
     Left = 308
@@ -125,6 +123,8 @@ object FrmSettings: TFrmSettings
     Appearance.BorderColorDown = 11565130
     Appearance.BorderColorChecked = 13744549
     Appearance.BorderColorDisabled = 13948116
+    Appearance.Color = clWhite
+    Appearance.ColorTo = clWhite
     Appearance.ColorChecked = 13744549
     Appearance.ColorCheckedTo = 13744549
     Appearance.ColorDisabled = clWhite
@@ -184,6 +184,8 @@ object FrmSettings: TFrmSettings
     Appearance.BorderColorDown = 11565130
     Appearance.BorderColorChecked = 13744549
     Appearance.BorderColorDisabled = 13948116
+    Appearance.Color = clWhite
+    Appearance.ColorTo = clWhite
     Appearance.ColorChecked = 13744549
     Appearance.ColorCheckedTo = 13744549
     Appearance.ColorDisabled = clWhite
@@ -223,7 +225,7 @@ object FrmSettings: TFrmSettings
     Alignment = taLeftJustify
     Caption = 'Show password'
     ReturnIsTab = False
-    Version = '1.7.0.3'
+    Version = '1.8.1.2'
   end
   object SVGCollection: TAdvSVGImageCollection
     Images = <
@@ -327,19 +329,15 @@ object FrmSettings: TFrmSettings
     Top = 144
   end
   object VImgList: TVirtualImageList
-    DisabledGrayscale = False
-    DisabledSuffix = '_Disabled'
     Images = <
       item
         CollectionIndex = 0
         CollectionName = 'cancel'
-        Disabled = False
         Name = 'cancel'
       end
       item
         CollectionIndex = 1
         CollectionName = 'ok'
-        Disabled = False
         Name = 'ok'
       end>
     ImageCollection = SVGCollection
@@ -347,13 +345,6 @@ object FrmSettings: TFrmSettings
     Height = 24
     Left = 144
     Top = 144
-  end
-  object AES: TAESEncryption
-    Version = '4.2.2.0'
-    keyLength = kl256
-    AType = atECB
-    Left = 24
-    Top = 80
   end
   object Styler: TAdvFormStyler
     AppColor = 14851584
