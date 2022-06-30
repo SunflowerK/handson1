@@ -1,9 +1,9 @@
 ﻿[Browser]
-Coordinates=144,10,62,36
+Coordinates=144,10,55,33
 
 [btnLookup]
-Coordinates=60,10,74,36
+Coordinates=60,10,67,33
 
 [txtId]
-Coordinates=10,10,40,58
+Coordinates=10,10,40,51
 
