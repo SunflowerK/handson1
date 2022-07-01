@@ -57299,8 +57299,6 @@ rtl.module("Forms.Main",["System","SysUtils","Classes","JS","Web","WEBLib.Graphi
       this.Connection.BeforeLoadDFMValues();
       try {
         this.SetName("Form1");
-        this.SetLeft(0);
-        this.SetTop(0);
         this.SetWidth(494);
         this.SetHeight(480);
         this.FFont.FCharset = 1;
@@ -57308,7 +57306,7 @@ rtl.module("Forms.Main",["System","SysUtils","Classes","JS","Web","WEBLib.Graphi
         this.FFont.SetHeight(-11);
         this.FFont.SetName("Arial");
         this.FFont.SetStyle({});
-        this.SetTabOrder(1);
+        this.SetParentFont(false);
         this.SetEvent(this,"OnCreate","WebFormCreate");
         this.txtEntity.SetParentComponent(this);
         this.txtEntity.SetName("txtEntity");
@@ -57317,6 +57315,8 @@ rtl.module("Forms.Main",["System","SysUtils","Classes","JS","Web","WEBLib.Graphi
         this.txtEntity.SetWidth(433);
         this.txtEntity.SetHeight(22);
         this.txtEntity.SetChildOrderEx(1);
+        this.txtEntity.SetHeightPercent(100.000000000000000000);
+        this.txtEntity.SetWidthPercent(100.000000000000000000);
         this.SetEvent$1(this.txtEntity,this,"OnChange","txtEntityChange");
         this.btnConnect.SetParentComponent(this);
         this.btnConnect.SetName("btnConnect");
@@ -57326,6 +57326,8 @@ rtl.module("Forms.Main",["System","SysUtils","Classes","JS","Web","WEBLib.Graphi
         this.btnConnect.SetHeight(25);
         this.btnConnect.SetCaption("Connect");
         this.btnConnect.SetChildOrderEx(2);
+        this.btnConnect.SetHeightPercent(100.000000000000000000);
+        this.btnConnect.SetWidthPercent(100.000000000000000000);
         this.SetEvent$1(this.btnConnect,this,"OnClick","btnConnectClick");
         this.lbResults.SetParentComponent(this);
         this.lbResults.SetName("lbResults");
@@ -57333,8 +57335,10 @@ rtl.module("Forms.Main",["System","SysUtils","Classes","JS","Web","WEBLib.Graphi
         this.lbResults.SetTop(44);
         this.lbResults.SetWidth(433);
         this.lbResults.SetHeight(382);
+        this.lbResults.SetHeightPercent(100.000000000000000000);
         this.lbResults.SetItemHeight(14);
         this.lbResults.SetItemIndex(-1);
+        this.lbResults.SetWidthPercent(100.000000000000000000);
         this.btnStatus.SetParentComponent(this);
         this.btnStatus.SetName("btnStatus");
         this.btnStatus.SetLeft(32);
@@ -57344,6 +57348,8 @@ rtl.module("Forms.Main",["System","SysUtils","Classes","JS","Web","WEBLib.Graphi
         this.btnStatus.SetCaption("Service Info");
         this.btnStatus.SetChildOrderEx(3);
         this.btnStatus.SetEnabled(false);
+        this.btnStatus.SetHeightPercent(100.000000000000000000);
+        this.btnStatus.SetWidthPercent(100.000000000000000000);
         this.SetEvent$1(this.btnStatus,this,"OnClick","btnStatusClick");
         this.Client.SetParentComponent(this);
         this.Client.SetName("Client");
